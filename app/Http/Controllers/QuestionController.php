@@ -31,9 +31,9 @@ class QuestionController extends Controller
             'nama'       => 'required|max:10',
             'email'      => ['required', 'email'],
             'pertanyaan' => 'required|max:300|min:8',
-        ],[
+        ], [
             'nama.required' => 'Nama tidak boleh kosong',
-            'email.email' => 'Email Tidak valid',
+            'email.email'   => 'Email Tidak valid',
         ]);
 
         $data['nama']       = $request->nama;
@@ -42,7 +42,12 @@ class QuestionController extends Controller
 
         //return view('home-question-respon', $data);
 
-        return redirect('/home')->with('info', 'Selamat, Kamu Lulus!');
+        return redirect('/home')
+            ->with('info', 'Selamat, Kamu Lulus!')
+            ->with('nama', $data['nama'])
+            ->with('email', $data['email'])
+            ->with('pertanyaan', $data['pertanyaan'])
+            ->with('lanjut', true);
     }
 
     /**

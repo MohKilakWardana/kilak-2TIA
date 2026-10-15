@@ -175,8 +175,14 @@
 
                         @if (session('info'))
                             <div class="alert alert-info">
-                                {!! session('info') !!}
+                                {{ session('info') }}
                             </div>
+
+                            <script>
+                                setTimeout(function() {
+                                    window.location.href = "{{ route('question.success') }}";
+                                }, 2000);
+                            </script>
                         @endif
 
                         <form action="{{ route('question.store') }}" method="POST">
