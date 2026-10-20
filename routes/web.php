@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\http\Controllers\HomeController;
 use App\http\Controllers\QuestionController;
 use App\http\Controllers\DashboardController;
-
+use App\http\Controllers\PelangganController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,7 +17,6 @@ Route::post('question/store', [QuestionController::class, 'store'])
 
 Route::get('dashboard', [DashboardController::class,'index'])->name('dashboard');
 
-
 Route::get('/question/terima-kasih', function () {
     return view('home-question-respon', [
         'nama' => session('nama'),
@@ -25,3 +24,5 @@ Route::get('/question/terima-kasih', function () {
         'pertanyaan' => session('pertanyaan'),
     ]);
 })->name('question.success');
+
+Route::resource('pelanggan', PelangganController::class);
