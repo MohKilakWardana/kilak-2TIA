@@ -1,29 +1,22 @@
 <!--
 
-
 =========================================================
 * Volt Free - Bootstrap 5 Dashboard
 =========================================================
-
 
 * Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
 * Copyright 2021 Themesberg (https://www.themesberg.com)
 * License (https://themesberg.com/licensing)
 
-
 * Designed and coded by https://themesberg.com
-
 
 =========================================================
 
-
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
-
 
 -->
 <!DOCTYPE html>
 <html lang="en">
-
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -32,7 +25,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title" content="Volt - Free Bootstrap 5 Dashboard">
     <meta name="author" content="Themesberg">
-
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets-admin/img/favicon/apple-touch-icon.png') }}">
@@ -45,13 +37,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-
     <!-- Volt CSS -->
     <link type="text/css" href="{{ asset('assets-admin/css/volt.css') }}" rel="stylesheet">
 
-
 </head>
-
 
 <body>
     <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
@@ -67,7 +56,6 @@
             </button>
         </div>
     </nav>
-
 
     <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
         <div class="sidebar-inner px-4 pt-3">
@@ -126,9 +114,8 @@
                         <span class="sidebar-text">Dashboard</span>
                     </a>
                 </li>
-                <!-- Tambahkan blok kode ini -->
                 <li class="nav-item  active ">
-                    <a href="{{route('pelanggan.create')}}" class="nav-link">
+                    <a href="{{route('pelanggan.index')}}" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -175,6 +162,7 @@
                         </ul>
                     </div>
                 </li>
+
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
                 <li class="nav-item">
                     <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/"
@@ -189,6 +177,15 @@
                         </span>
                         <span class="sidebar-text">Documentation <span
                                 class="badge badge-sm bg-secondary ms-1 text-gray-800">v1.4</span></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
+                        <span class="sidebar-icon">
+                            <img src="{{ asset('assets-admin/img/themesberg.svg') }}" height="20" width="28"
+                                alt="Themesberg Logo">
+                        </span>
+                        <span class="sidebar-text">Themesberg</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -209,9 +206,7 @@
         </div>
     </nav>
 
-
     <main class="content">
-
 
         <nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
             <div class="container-fluid px-0">
@@ -257,7 +252,7 @@
                                             <div class="col-auto">
                                                 <!-- Avatar -->
                                                 <img alt="Image placeholder"
-                                                    src="{{ asset('assets-admin/img/team/profile-picture-1.jpg') }}"
+                                                    src="../../assets/img/team/profile-picture-1.jpg"
                                                     class="avatar-md rounded">
                                             </div>
                                             <div class="col ps-0 ms-2">
@@ -281,7 +276,7 @@
                                             <div class="col-auto">
                                                 <!-- Avatar -->
                                                 <img alt="Image placeholder"
-                                                    src="{{ asset('assets-admin/img/team/profile-picture-2.jpg') }}"
+                                                    src="../../assets/img/team/profile-picture-2.jpg"
                                                     class="avatar-md rounded">
                                             </div>
                                             <div class="col ps-0 ms-2">
@@ -317,7 +312,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class="media d-flex align-items-center">
                                     <img class="avatar rounded-circle" alt="Image placeholder"
-                                        src="{{ asset('assets-admin/img/team/profile-picture-3.jpg') }}">
+                                        src="../../assets/img/team/profile-picture-3.jpg">
                                     <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
                                         <span class="mb-0 font-small fw-bold text-gray-900">Bonnie Green</span>
                                     </div>
@@ -376,7 +371,6 @@
                 </div>
             </div>
         </nav>
-
 
         <div class="py-4">
             <div class="dropdown">
@@ -440,7 +434,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="row">
             <div class="col-12 col-xl-8">
@@ -597,7 +590,7 @@
                                                 <!-- Avatar -->
                                                 <a href="#" class="avatar">
                                                     <img class="rounded" alt="Image placeholder"
-                                                        src="{{ asset('assets-admin/img/team/profile-picture-1.jpg') }}">
+                                                        src="../../assets/img/team/profile-picture-1.jpg">
                                                 </a>
                                             </div>
                                             <div class="col-auto ms--2">
@@ -629,7 +622,7 @@
                                                 <!-- Avatar -->
                                                 <a href="#" class="avatar">
                                                     <img class="rounded" alt="Image placeholder"
-                                                        src="{{ asset('assets-admin/img/team/profile-picture-2.jpg') }}">
+                                                        src="../../assets/img/team/profile-picture-2.jpg">
                                                 </a>
                                             </div>
                                             <div class="col-auto ms--2">
@@ -661,7 +654,7 @@
                                                 <!-- Avatar -->
                                                 <a href="#" class="avatar">
                                                     <img class="rounded" alt="Image placeholder"
-                                                        src="{{ asset('assets-admin/img/team/profile-picture-3.jpg') }}">
+                                                        src="../../assets/img/team/profile-picture-3.jpg">
                                                 </a>
                                             </div>
                                             <div class="col-auto ms--2">
@@ -693,7 +686,7 @@
                                                 <!-- Avatar -->
                                                 <a href="#" class="avatar">
                                                     <img class="rounded" alt="Image placeholder"
-                                                        src="{{ asset('assets-admin/img/team/profile-picture-4.jpg') }}">
+                                                        src="../../assets/img/team/profile-picture-4.jpg">
                                                 </a>
                                             </div>
                                             <div class="col-auto ms--2">
@@ -838,11 +831,10 @@
             <div class="col-12 col-xl-4">
                 <div class="col-12 px-0 mb-4">
                     <div class="card shadow border-0 text-center p-0">
-                        <div class="profile-cover rounded-top"
-                            data-background="{{ asset('assets-admin/img/profile-cover.jpg') }}"
-                            style="background: url(&quot;../../assets-admin/img/profile-cover.jpg&quot;);"></div>
+                        <div class="profile-cover rounded-top" data-background="../../assets/img/profile-cover.jpg"
+                            style="background: url(&quot;../../assets/img/profile-cover.jpg&quot;);"></div>
                         <div class="card-body pb-5">
-                            <img src="{{ asset('assets-admin/img/team/profile-picture-1.jpg') }}"
+                            <img src="../../assets/img/team/profile-picture-1.jpg"
                                 class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
                             <h4 class="h3">Neil Sims</h4>
                             <h5 class="fw-normal">Senior Software Engineer</h5>
@@ -1002,7 +994,6 @@
             </div>
         </div>
 
-
         <footer class="bg-white rounded shadow p-5 mb-4 mt-4">
             <div class="row">
                 <div class="col-12 col-md-4 col-xl-6 mb-4 mb-md-0">
@@ -1032,15 +1023,12 @@
         </footer>
     </main>
 
-
     <!-- Core -->
     <script src="{{ asset('assets-admin/vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('assets-admin/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
-
     <!-- Vendor JS -->
     <script src="{{ asset('assets-admin/vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
 </body>
-
 
 </html>

@@ -1,3 +1,20 @@
+<!--
+
+=========================================================
+* Volt Pro - Premium Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,9 +114,8 @@
                         <span class="sidebar-text">Dashboard</span>
                     </a>
                 </li>
-                <!-- Tambahkan blok kode ini -->
                 <li class="nav-item  active ">
-                    <a href="" class="nav-link">
+                    <a href="{{route('pelanggan.index')}}" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -112,6 +128,7 @@
                         <span class="sidebar-text">Pelanggan</span>
                     </a>
                 </li>
+
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
                 <li class="nav-item">
                     <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/"
@@ -336,7 +353,7 @@
                     <p class="mb-0">Form untuk menambahkan data pelanggan baru.</p>
                 </div>
                 <div>
-                    <a href="" class="btn btn-primary"><i class="far fa-question-circle me-1"></i> Kembali</a>
+                    <a href="{{route('pelanggan.index')}}" class="btn btn-primary"><i class="far fa-question-circle me-1"></i> Kembali</a>
                 </div>
             </div>
         </div>
@@ -346,18 +363,20 @@
                 <div class="card border-0 shadow components-section">
                     <div class="card-body">
                         <form action="{{ route('pelanggan.store') }}" method="POST">
+                            @csrf
                             <div class="row mb-4">
                                 <div class="col-lg-4 col-sm-6">
                                     <!-- First Name -->
                                     <div class="mb-3">
                                         <label for="first_name" class="form-label">First name</label>
-                                        <input type="text" id="first_name" class="form-control" name= "first_name" required>
+                                        <input type="text" id="first_name" class="form-control" name="first_name"
+                                            required>
                                     </div>
 
                                     <!-- Last Name -->
                                     <div class="mb-3">
                                         <label for="last_name" class="form-label">Last name</label>
-                                        <input type="text" id="last_name" class="form-control" name= "last_name"
+                                        <input type="text" id="last_name" class="form-control" name="last_name"
                                             required>
                                     </div>
                                 </div>
@@ -366,7 +385,7 @@
                                     <!-- Birthday -->
                                     <div class="mb-3">
                                         <label for="birthday" class="form-label">Birthday</label>
-                                        <input type="date" id="birthday" class="form-control" name= "birthday">
+                                        <input type="date" id="birthday" class="form-control" name="birthday">
                                     </div>
 
                                     <!-- Gender -->
@@ -385,14 +404,14 @@
                                     <!-- Email -->
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="text" id="email" class="form-control" name= "email"
+                                        <input type="text" id="email" class="form-control" name="email"
                                             required>
                                     </div>
 
                                     <!-- Phone -->
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Phone</label>
-                                        <input type="text" id="phone" class="form-control" name= "phone">
+                                        <input type="text" id="phone" class="form-control" name="phone">
                                     </div>
 
                                     <!-- Buttons -->
