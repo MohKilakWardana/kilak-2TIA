@@ -397,8 +397,11 @@
                                         <label for="gender" class="form-label">Gender</label>
                                         <select id="gender" name="gender" class="form-label" name="gender">
                                             <option selected>Gender</option>
-                                            <option value="Male" {{ $dataPelanggan->gender == 'Male' ? 'selected' : '' }}>Male</option>
-                                            <option value="Female" {{ $dataPelanggan->gender == 'Female' ? 'selected' : '' }}>Female</option>
+                                            <option value="Male"
+                                                {{ $dataPelanggan->gender == 'Male' ? 'selected' : '' }}>Male</option>
+                                            <option value="Female"
+                                                {{ $dataPelanggan->gender == 'Female' ? 'selected' : '' }}>Female
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
