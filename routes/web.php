@@ -5,6 +5,7 @@ use App\http\Controllers\HomeController;
 use App\http\Controllers\QuestionController;
 use App\http\Controllers\DashboardController;
 use App\http\Controllers\PelangganController;
+use App\Http\Controllers\BiodataController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,3 +27,8 @@ Route::get('/question/terima-kasih', function () {
 })->name('question.success');
 
 Route::resource('pelanggan', PelangganController::class);
+
+Route::redirect('/', '/biodata');
+
+Route::resource('biodata', BiodataController::class)
+    ->parameters(['biodata' => 'biodata']);
